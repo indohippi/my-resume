@@ -1,23 +1,21 @@
-import styles from '/styles/Menu.module.css'; // Your path to Menu.module.css
+// components/Menu.js
+import styles from '/styles/Menu.module.css'; // Adjust the import path if necessary
+import Link from 'next/link';
 
-const Menu = ({ setActiveSection }) => {
+const Menu = () => {
   return (
-    <div className={styles.menu}>
-      <div className={styles.menuItem} onClick={() => setActiveSection('header')}>
-        Header
-      </div>
-      <div className={styles.menuItem} onClick={() => setActiveSection('contactInfo')}>
-        Contact Info
-      </div>
-      {/* Add menu items for each section */}
-    </div>
+    <nav className={styles.menu}>
+      <ul>
+        <li className={styles.menuItem}>
+          <Link href="/contactInfo">Contact Info</Link>
+        </li>
+        <li className={styles.menuItem}>
+          <Link href="/objective">Objective</Link>
+        </li>
+        {/* Add other links as necessary */}
+      </ul>
+    </nav>
   );
 };
 
 export default Menu;
-
-
-
-
-
-
