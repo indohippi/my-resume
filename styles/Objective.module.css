@@ -1,0 +1,17 @@
+/* styles/Objective.module.css */
+.objectiveSection {
+    background-color: #2e2e72;
+    border: 3px solid #ffffff;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    color: #ffffff;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  .objectiveText {
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #1f1f7a;
+    padding: 0.5rem;
+  }
+  

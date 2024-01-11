@@ -1,0 +1,32 @@
+/* styles/TechnicalSkills.module.css */
+.technicalSkillsSection {
+    background-color: #2e2e72; /* FF7 menu blue */
+    border: 3px solid #ffffff; /* Border color */
+    margin-bottom: 1rem;
+    padding: 1rem;
+    color: #ffffff; /* Text color */
+    font-family: 'Press Start 2P', cursive; /* Retro style font */
+  }
+  
+  .technicalSkillsTitle {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #9db3e6; /* FF7 menu selection color */
+  }
+  
+  .technicalSkillsList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .technicalSkillsItem {
+    background-color: #1f1f7a; /* FF7 menu item background */
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  .skillCategory {
+    color: #ffcb77; /* Highlight color for category titles */
+  }
+  

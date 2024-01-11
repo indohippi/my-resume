@@ -1,0 +1,25 @@
+/* styles/Certifications.module.css */
+.certifications {
+    background-color: #000050;
+    color: #9db3e6;
+    border: 3px solid #fff;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Press Start 2P', cursive;
+  }  
+  
+  .certifications h2 {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+  }
+  
+  .certifications ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .certifications li {
+    padding: 5px 0;
+  }
+  
