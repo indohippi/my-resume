@@ -1,20 +1,18 @@
 // components/Menu.js
-import styles from '/styles/Menu.module.css'; // Adjust the import path if necessary
 import Link from 'next/link';
+import styles from '/styles/Menu.module.css'; // Make sure the path to your CSS module is correct
 
 const Menu = () => {
   return (
-    <nav className={styles.menu}>
-      <ul>
-        <li className={styles.menuItem}>
-          <Link href="/contactInfo">Contact Info</Link>
-        </li>
-        <li className={styles.menuItem}>
-          <Link href="/objective">Objective</Link>
-        </li>
-        {/* Add other links as necessary */}
-      </ul>
-    </nav>
+    <div className={styles.menu}>
+      <Link href="/contactInfo" className={styles.menuItem}>Contact Info</Link>
+      <Link href="/objective" className={styles.menuItem}>Objective</Link>
+      <Link href="/professionalExperience" className={styles.menuItem}>Professional Experience</Link>
+      <Link href="/education" className={styles.menuItem}>Education</Link>
+      <Link href="/certifications" className={styles.menuItem}>Certifications</Link>
+      <Link href="/technicalSkills" className={styles.menuItem}>Technical Skills</Link>
+      {/* Add any additional links you may have */}
+    </div>
   );
 };
 

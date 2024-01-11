@@ -1,27 +1,44 @@
 /* styles/Menu.module.css */
 .menu {
-    background-color: #0000ff; /* Adjust to match FF7's blue */
-    border: 2px solid #fff; /* White border */
+    background: linear-gradient(to bottom, #0000cd, #191970); /* FF7 menu gradient */
+    border: 3px solid #fff; /* White border to match FF7 style */
     color: #fff; /* White text color */
-    font-family: 'Press Start 2P', cursive; /* Example retro font */
+    font-family: 'Press Start 2P', cursive; /* Retro font */
     width: 200px; /* Adjust width as needed */
-    padding: 10px;
-    box-shadow: 3px 3px #000; /* Optional: to give a "depth" effect */
+    padding: 20px; /* Add more padding for visual comfort */
+    box-shadow: 3px 3px #000; /* Depth effect */
     position: fixed; /* Fixed position */
-    right: 0; /* Align to the right side */
-    top: 0; /* Align to the top */
-    height: 100%; /* Full height */
-  }
-  
-  .menuItem {
-    padding: 5px;
-    margin-bottom: 5px;
+    right: 10px; /* Slight offset from the right edge */
+    top: 50px; /* Offset from the top to not overlap with the browser's toolbar */
+    height: 50%; /* Adjust this value to 60% if you want it to take up 3/5ths */
+    overflow-y: auto; /* Allows vertical scrolling if content is taller than the box */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.menuItem {
+    display: block; /* Ensure each item takes up its own line */
+    padding: 8px 10px; /* Even padding on all sides */
+    margin: 8px 0; /* Spacing between items */
     cursor: pointer;
-    list-style: none; /* Remove bullet points */
-  }
-  
-  .menuItem:hover {
-    background-color: #ffffff; /* White background for hover state */
-    color: #0000ff; /* Blue text color for hover state */
-  }
-  
+    border-bottom: 1px solid #fff; /* White bottom border for each item */
+    text-align: center; /* Center the text within the item for a balanced look */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.menuItem:last-child {
+    border-bottom: none; /* Remove bottom border for the last item */
+}
+
+.menuItem:hover {
+    background-color: #4169e1; /* FF7 selection blue */
+    color: #ffffff; /* Ensure text is white on hover for readability */
+}
+
+/* Additional styling for active menu item - you can add a class to the active item in your component */
+.menuItem.active {
+    background-color: #104e8b; /* Darker blue for active item */
+    color: #ffffff; /* Ensure text is white */
+}
+
+/* Include this in your global styles */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
