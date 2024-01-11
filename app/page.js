@@ -3,12 +3,12 @@ import Link from 'next/link';
 
 import Menu from '../components/Menu';
 import Header from '../components/Header';
-import ContactInfo from '../components/ContactInfo';
-import Objective from '../components/Objective';
-import ProfessionalExperience from '../components/ProfessionalExperience';
-import Education from '../components/Education';
-import Certifications from '../components/Certifications';
-import TechnicalSkills from '../components/TechnicalSkills';
+import ContactInfo from '../pages/ContactInfo';
+import Objective from '../pages/Objective';
+import ProfessionalExperience from '../pages/ProfessionalExperience';
+import Education from '../pages/Education';
+import Certifications from '../pages/Certifications';
+import TechnicalSkills from '../pages/TechnicalSkills';
 
 const Page = () => {
   return (
