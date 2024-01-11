@@ -1,0 +1,30 @@
+/* styles/CharacterStats.module.css */
+.characterContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align to the left */
+    padding-left: 20px; /* Spacing from the left edge */
+  }
+  
+  .characterBubble {
+    background: #000080; /* Deep blue background similar to FF7 */
+    border: 2px solid #FFFFFF; /* White border */
+    margin-bottom: 10px; /* Space between character bubbles */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .characterBubble img {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    margin-right: 10px; /* Space between image and stats */
+  }
+  
+  .stats {
+    color: #FFFFFF; /* White text color */
+    font-family: 'Press Start 2P', cursive; /* Retro font */
+  }
+  
+  /* Add global styles or imports as needed */
+  
