@@ -1,7 +1,7 @@
 // app/page.js
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/Header';
 import Menu from '../components/Menu';
 import CharacterStats from '../components/CharacterStats';
@@ -11,26 +11,35 @@ import ContactInfo from '../pages/ContactInfo';
 import { useSearchParams } from 'next/navigation';
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const searchParams = useSearchParams();
-  const modal = searchParams.get('modal');
+  const modalContent = searchParams.get('modal');
 
-  const renderModalContent = () => {
-    switch (modal) {
-      case 'contactInfo':
-        return <ContactInfo />;
-      // Add cases for other modals
-      default:
-        return null;
-    }
-  };
+  const openModal = () => setIsModalOpen(true);
+const closeModal = () => setIsModalOpen(false);
 
-  return (
-    <div>
-      <Header />
-      <Menu />
-      <CharacterStats />
-      {modal && <Modal>{renderModalContent()}</Modal>}
-      {/* Rest of the page content */}
-    </div>
-  );
+const renderModalContent = () => {
+switch (modalContent) {
+case 'contactInfo':
+return <ContactInfo />;
+// Include other cases for each modal content
+default:
+return null;
+}
+};
+
+return (
+<div>
+<Header />
+<Menu openModal={openModal} />
+{isModalOpen && (
+<Modal onClose={closeModal}>
+{renderModalContent()}
+</Modal>
+)}
+{/* Rest of the page content /}
+<CharacterStats />
+{/ ... other components */}
+</div>
+);
 };
