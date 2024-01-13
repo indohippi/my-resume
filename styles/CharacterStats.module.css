@@ -1,8 +1,7 @@
 /* styles/CharacterStats.module.css */
 .characterContainer {
     font-family: 'Reactor7', sans-serif;
-    display: flex;
-    flex-direction: row; /* Align image and stats side by side */
+    display: flex; /* Align image and stats side by side */
     align-items: center;
     padding: 20px;
     max-width: 300px;
@@ -10,24 +9,18 @@
     border: 3px solid #FFFFFF;
 }
 
-.characterBubble {
-    display: flex;
-    align-items: center;
-}
-
-.imageContainer {
+.characterImage {
     margin-right: 10px; /* Space between image and stats */
 }
 
-.stats {
+.statsContainer {
     display: flex;
     flex-direction: column;
 }
 
 .statItem {
-    font-family: 'Reactor7', sans-serif;
-    color: rgb(232, 232, 240); /* Color for "Jared" */
-    font-size: 22px; /* Font size for "Jared" */
+    color: rgb(232, 232, 240);
+    font-size: 22px;
     margin-bottom: 5px;
 }
 
@@ -38,14 +31,28 @@
 }
 
 .statLabel {
-    font-family: 'Reactor7', sans-serif;
-    color: rgb(13, 236, 236); /* Color for labels "LV", "HP", "MP" */
-    font-size: 22px; /* Font size for labels */
+    color: rgb(13, 236, 236);
+    font-size: 24px;
+    font-weight: bolder;
     margin-right: 5px; /* Space between label and value */
 }
 
 .statValue {
-    color: rgb(232, 232, 238); /* Color for numbers */
-    font-size: 22px; /* Font size for numbers */
-    margin-bottom: 5px; /* Space between rows */
+    color: rgb(232, 232, 238);
+    font-size: 22px;
+}
+
+.hpBar, .mpBar {
+    height: 5px;
+    width: calc(100% - 10px); /* Adjust width based on the parent's padding */
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.hpBar {
+    background: linear-gradient(to right, #ff0000, #ffff00);
+}
+
+.mpBar {
+    background: linear-gradient(to right, #0000ff, #00ffff);
 }
