@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Menu from '../components/Menu';
 import CharacterStats from '../components/CharacterStats';
 import Modal from '../components/Modal';
+import SocialMedia from '../components/SocialMedia'; // Adjust the path as necessary
 import ContactInfo from '../pages/ContactInfo';
 import Objective from '../pages/Objective';
 import ProfessionalExperience from '../pages/ProfessionalExperience';
@@ -56,6 +57,7 @@ export default function Home() {
         </Modal>
       )}
       <CharacterStats />
+      <SocialMedia />
       {/* ... other components */}
     </div>
   );

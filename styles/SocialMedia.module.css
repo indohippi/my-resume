@@ -1,0 +1,30 @@
+/* styles/SocialMedia.module.css */
+.socialContainer {
+    position: fixed; /* Fixed positioning relative to the viewport */
+    bottom: 20px; /* 20px from the bottom */
+    right: 20px; /* 20px from the right */
+    background: rgba(0, 0, 128, 0.8); /* Semi-transparent blue background */
+    padding: 10px;
+    border: 2px solid white; /* White border */
+    color: white; /* White text color */
+    text-align: center;
+  }
+  
+  .timeDisplay {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .socialButtons a {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    background: #333; /* Dark background for buttons */
+    color: white; /* White text */
+    text-decoration: none;
+  }
+  
+  .github { /* Additional styles for GitHub button */ }
+  .linkedin { /* Additional styles for LinkedIn button */ }
+  .email { /* Additional styles for Email button */ }
+  

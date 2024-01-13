@@ -64,3 +64,8 @@ html, body {
 .resume-section li, .resume-section div {
   margin-bottom: 5px;
 }
+
+.mainContainer {
+  position: relative; /* This allows absolute positioning inside it */
+  /* ... other styles ... */
+}
