@@ -6,11 +6,14 @@
     font-family: 'Reactor7', sans-serif;
     width: 200px; /* Adjust width as needed */
     padding: 20px; /* Add more padding for visual comfort */
+        display: flex; /* Setup for flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Space between items, pushing the last to the bottom */
     box-shadow: 3px 3px #000; /* Depth effect */
     position: fixed; /* Fixed position */
     right: 10px; /* Slight offset from the right edge */
     top: 50px; /* Offset from the top to not overlap with the browser's toolbar */
-    height: 50%; /* Adjust this value to 60% if you want it to take up 3/5ths */
+    height: 40%; /* Adjust this value to 60% if you want it to take up 3/5ths */
     overflow-y: auto; /* Allows vertical scrolling if content is taller than the box */
     z-index: 1000; /* Ensure it's above other content */
 }
@@ -42,3 +45,51 @@
 
 /* Include this in your global styles */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* styles/Menu.module.css */
+/* ... other styles ... */
+
+.HireMe {
+    /* Pushes the button to the bottom */
+    margin-top: auto; 
+    text-align: center;
+  }
+  
+  .hireMeLink {
+    /* Styles for your Hire Me button */
+    background-color: transparent;
+    color: white;
+    display: inline-block; /* To apply padding and border-radius */
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 30px;
+    border-radius: 5px;
+    background-image: linear-gradient(
+      45deg, 
+      red, 
+      orange, 
+      yellow, 
+      green, 
+      blue, 
+      indigo, 
+      violet
+    );
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: rainbowAnimation 3s linear infinite;
+  }
+  
+  @keyframes rainbowAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  
+  .hireMeLink:hover {
+    background-color: #084482; /* Darker shade on hover */
+  }
+  
