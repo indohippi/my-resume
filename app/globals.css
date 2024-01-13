@@ -1,11 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+/* app/globals.css or a separate .css file */
+@font-face {
+  font-family: 'Reactor7';
+  src: url('/fonts/Reactor7.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/Reactor7.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/Reactor7.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/Reactor7.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/Reactor7.svg#Reactor7') format('svg'); /* Legacy iOS */
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  font-family: 'Reactor7', sans-serif;
+}
 
 /* Reset default browser styles */
 html, body {
   margin: 0;
   padding: 0;
   font-family: 'VT323', monospace; /* VT323 font for the retro feel */
-  background-color: #000050; /* Dark blue background, adjust the color as needed */
+  background-color: #1e305f; /* Adjusted dark blue background to match FF7 UI */
   color: #fff; /* White text */
 }
 
@@ -21,18 +35,23 @@ html, body {
 
 /* Style for each resume section */
 .resume-section {
-  background: #30307d; /* Darker blue background for each section, adjust the color as needed */
+  background: #30307d; /* Darker blue background, adjust the color as needed */
   border: 3px solid #8b8bae; /* Light border color, adjust the color as needed */
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 4px;
-  box-shadow: 0 0 10px #fff; /* White glow for active selection */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Adjusted white glow for active selection */
 }
 
 /* Header styles within each section */
 .resume-section h2 {
+  background-color: #a40000; /* Adjusted red background to match FF7 UI */
+  color: #ffffff; /* White text */
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  padding: 4px;
+  text-align: center;
+  border-radius: 4px;
 }
 
 /* List styles within each section */
