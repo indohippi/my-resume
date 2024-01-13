@@ -3,7 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Reactor7', sans-serif;
-  background-color: #1b1b1b;
+  background: linear-gradient(to bottom, #0000cd, #191970); /* FF7 menu gradient */
   color: #f4f4f4;
 }
 

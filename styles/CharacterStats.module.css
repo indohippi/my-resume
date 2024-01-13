@@ -1,30 +1,51 @@
 /* styles/CharacterStats.module.css */
 .characterContainer {
+    font-family: 'Reactor7', sans-serif;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align to the left */
-    padding-left: 20px; /* Spacing from the left edge */
-  }
-  
-  .characterBubble {
-    background: #000080; /* Deep blue background similar to FF7 */
-    border: 2px solid #FFFFFF; /* White border */
-    margin-bottom: 10px; /* Space between character bubbles */
-    padding: 10px;
+    flex-direction: row; /* Align image and stats side by side */
+    align-items: center;
+    padding: 20px;
+    max-width: 300px;
+    background: #000080;
+    border: 3px solid #FFFFFF;
+}
+
+.characterBubble {
     display: flex;
     align-items: center;
-  }
-  
-  .characterBubble img {
-    width: 50px; /* Adjust as needed */
-    height: 50px; /* Adjust as needed */
-    margin-right: 10px; /* Space between image and stats */
-  }
-  
-  .stats {
-    color: #FFFFFF; /* White text color */
-    font-family: 'Reactor7', sans-serif;
 }
-  
-  /* Add global styles or imports as needed */
-  
+
+.imageContainer {
+    margin-right: 10px; /* Space between image and stats */
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+}
+
+.statItem {
+    font-family: 'Reactor7', sans-serif;
+    color: rgb(232, 232, 240); /* Color for "Jared" */
+    font-size: 22px; /* Font size for "Jared" */
+    margin-bottom: 5px;
+}
+
+.statRow {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.statLabel {
+    font-family: 'Reactor7', sans-serif;
+    color: rgb(13, 236, 236); /* Color for labels "LV", "HP", "MP" */
+    font-size: 22px; /* Font size for labels */
+    margin-right: 5px; /* Space between label and value */
+}
+
+.statValue {
+    color: rgb(232, 232, 238); /* Color for numbers */
+    font-size: 22px; /* Font size for numbers */
+    margin-bottom: 5px; /* Space between rows */
+}
