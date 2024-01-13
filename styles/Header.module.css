@@ -1,12 +1,28 @@
 /* styles/Header.module.css */
 .header {
-    background-color: #000050;
-    color: #9db3e6;
-    border: 3px solid #fff;
-    margin-bottom: 20px;
-    padding: 10px;
-    text-align: center;
-    font-size: 20px;
+    background: #a50000; /* Red background */
+    color: white;
+    font-family: 'Press Start 2P', cursive; /* Retro font */
+    padding: 8px 16px;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid white; /* White border to match the FF7 style */
+  }
+  
+  .headerTitle {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .headerClose {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
     font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
   }
   
