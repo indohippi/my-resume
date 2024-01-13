@@ -20,9 +20,36 @@
     padding: 0;
   }
   
-  .contactInfoItem {
-    background-color: #1f1f7a;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
-  }
-  
+/* styles/ContactInfo.module.css */
+/* ... existing styles ... */
+
+.contactInfoItem a {
+    background-image: linear-gradient(
+        90deg, 
+        red, 
+        orange, 
+        yellow, 
+        green, 
+        blue, 
+        indigo, 
+        violet
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline; /* Aligns text inline with wrapping elements */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    overflow: hidden; /* Keeps the text within the bounds of the width */
+    animation: moveGradient 3s linear infinite;
+    text-decoration: none; /* Removes underline from links */
+}
+
+@keyframes moveGradient {
+    0% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.contactInfoItem a:hover {
+    animation: moveGradient 1s linear infinite;
+}
