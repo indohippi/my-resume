@@ -6,7 +6,8 @@ import Header from '../components/Header';
 import Menu from '../components/Menu';
 import CharacterStats from '../components/CharacterStats';
 import Modal from '../components/Modal';
-import SocialMedia from '../components/SocialMedia'; // Adjust the path as necessary
+import SocialMedia from '../components/SocialMedia';
+import SkillMeter from '../components/SkillMeter'; // Import SkillMeter component
 import ContactInfo from '../pages/ContactInfo';
 import Objective from '../pages/Objective';
 import ProfessionalExperience from '../pages/ProfessionalExperience';
@@ -23,6 +24,7 @@ export default function Home() {
     setModalContent(content);
     setIsModalOpen(true);
   };
+
   const closeModal = () => {
     setIsModalOpen(false);
     setModalContent(null);
@@ -47,9 +49,30 @@ export default function Home() {
     }
   };
 
+  // Define your skills and levels
+  const skills = [
+    { name: 'HTML', level: 90 },
+    { name: 'CSS', level: 85 },
+    { name: 'JavaScript', level: 75 },
+    // ... add more skills as needed
+  ];
+
+  const skillsData = {
+    labels: ['JavaScript', 'HTML & CSS', 'Java', 'Python', 'React', 'Data'],
+    datasets: [{
+      label: 'Years of Experience',
+      data: [8, 10, 3, 4, 5, 6], // Data for the radar chart
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+      borderColor: 'rgba(255, 99, 132, 1)',
+      borderWidth: 1,
+      pointBackgroundColor: 'rgba(255, 99, 132, 1)',
+    }],
+  };
+  const skillsColor = 'rgba(255, 99, 132, 0.2)';
+
   return (
     <div>
-      <Header />
+      <Header onClose={closeModal} />
       <Menu openModal={openModal} />
       {isModalOpen && (
         <Modal onClose={closeModal}>
@@ -58,7 +81,12 @@ export default function Home() {
       )}
       <CharacterStats />
       <SocialMedia />
-      {/* ... other components */}
+      {/* Render the radar chart SkillMeter */}
+      <SkillMeter 
+  dataPoints={[8, 10, 3, 4, 5, 6]} 
+  labels={['JavaScript', 'HTML & CSS', 'Java', 'Python', 'React', 'Data']} 
+/>
+      {/* ... other components ... */}
     </div>
   );
-};
+}
