@@ -1,0 +1,43 @@
+/* Blog.module.css */
+.blogContainer {
+    font-family: 'Reactor7', sans-serif;
+    padding: 20px;
+    max-width: 300px;
+    background: #000080; /* Match the CharacterStats background */
+    border: 3px solid #FFFFFF; /* Match the CharacterStats border */
+    border-radius: 10px; /* Match the CharacterStats border radius */
+    margin-top: 20px; /* Spacing from the previous content */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .post {
+    color: rgb(232, 232, 240); /* Light color for text to stand out */
+    font-size: 22px; /* Match the CharacterStats text size */
+    border-bottom: 2px solid #FFFFFF; /* Divider between posts */
+    padding-bottom: 10px; /* Spacing at the bottom of each post */
+    margin-bottom: 10px; /* Spacing between posts */
+  }
+  
+  /* Last post should not have a border at the bottom */
+  .post:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  
+  .post h3 {
+    color: rgb(13, 236, 236); /* Cyan color for headings to match the statLabel */
+    font-size: 24px; /* Slightly larger size for headings */
+    margin-bottom: 5px; /* Spacing below the heading */
+  }
+  
+  .post p {
+    color: rgb(232, 232, 238); /* Match the statValue color */
+    font-size: 22px; /* Consistent font size with the character stats */
+    margin-top: 0; /* No additional space on top of the paragraph */
+  }
+  
+  /* If you have additional interactive elements or specific items, add them here */
+  

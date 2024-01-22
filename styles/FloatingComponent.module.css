@@ -1,0 +1,26 @@
+.floatingContainer {
+    position: sticky; /* Makes the component float */
+    top: 0; /* Adjust this value to position the component beneath other elements */
+    width: 300px; /* Same width as CharacterStats and SkillMeter */
+    background: #000080; /* Background color */
+    border: 3px solid #FFFFFF; /* Border properties */
+    padding: 20px; /* Padding around the content */
+    border-radius: 10px;
+    margin-top: 20px; /* Space between the previous components */
+    overflow-y: auto; /* Enables scrolling for overflowing content */
+    height: calc(100vh - 100px); /* Adjust the 100px to account for the height of the headers */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    color: #FFFFFF; /* Text color */
+    font-family: 'Reactor7', sans-serif; /* Font styling */
+  }
+  
+  .article {
+    font-family: 'Reactor7', sans-serif;
+    line-height: 1.6;
+    color: #FFF;
+  }
+  
+  .article h1{
+    margin-top: 1.5rem;
+    font-size: 2rem;
+  }

@@ -8,6 +8,7 @@ import CharacterStats from '../components/CharacterStats';
 import Modal from '../components/Modal';
 import SocialMedia from '../components/SocialMedia';
 import SkillMeter from '../components/SkillMeter'; // Import SkillMeter component
+import Blog from '../components/Blog'; // Import Blog component
 import ContactInfo from '../pages/ContactInfo';
 import Objective from '../pages/Objective';
 import ProfessionalExperience from '../pages/ProfessionalExperience';
@@ -83,9 +84,10 @@ export default function Home() {
       <SocialMedia />
       {/* Render the radar chart SkillMeter */}
       <SkillMeter 
-  dataPoints={[8, 10, 3, 4, 5, 6]} 
-  labels={['JavaScript', 'HTML & CSS', 'Java', 'Python', 'React', 'Data']} 
-/>
+        dataPoints={[8, 10, 3, 4, 5, 6]} 
+        labels={['JavaScript', 'HTML & CSS', 'Java', 'Python', 'React', 'Data']} 
+      />
+      <Blog /> {/* Added Blog component here */}
       {/* ... other components ... */}
     </div>
   );
