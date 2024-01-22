@@ -6,7 +6,7 @@
     padding: 20px;
     border-radius: 10px;
     max-width: 300px;
-    background: #000080;
+    background: linear-gradient(to bottom, #0000cd, #191970); /* FF7 menu gradient */
     border: 3px solid #FFFFFF;
 }
 

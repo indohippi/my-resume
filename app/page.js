@@ -84,8 +84,8 @@ export default function Home() {
       <SocialMedia />
       {/* Render the radar chart SkillMeter */}
       <SkillMeter 
-        dataPoints={[8, 10, 3, 4, 5, 6]} 
-        labels={['JavaScript', 'HTML & CSS', 'Java', 'Python', 'React', 'Data']} 
+        dataPoints={[10, 10, 6, 4, 10, 8]} 
+        labels={['JavaScript', 'HTML & CSS', 'Advertising', 'Python', 'Design', 'Data']} 
       />
       <Blog /> {/* Added Blog component here */}
       {/* ... other components ... */}

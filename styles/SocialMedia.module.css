@@ -4,7 +4,7 @@
     bottom: 20px; /* 20px from the bottom */
     border-radius: 10px;
     right: 20px; /* 20px from the right */
-    background: rgba(0, 0, 128, 0.8); /* Semi-transparent blue background */
+    background: linear-gradient(to bottom, #0000cd, #191970); /* FF7 menu gradient */
     padding: 10px;
     border: 2px solid white; /* White border */
     color: white; /* White text color */

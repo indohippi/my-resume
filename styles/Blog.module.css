@@ -3,7 +3,7 @@
     font-family: 'Reactor7', sans-serif;
     padding: 20px;
     max-width: 300px;
-    background: #000080; /* Match the CharacterStats background */
+    background: linear-gradient(to bottom, #0000cd, #191970); /* FF7 menu gradient */
     border: 3px solid #FFFFFF; /* Match the CharacterStats border */
     border-radius: 10px; /* Match the CharacterStats border radius */
     margin-top: 20px; /* Spacing from the previous content */
