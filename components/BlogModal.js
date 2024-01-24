@@ -8,7 +8,7 @@ const BlogModal = ({ isOpen, onClose }) => {
   const menuItems = [
     { title: 'About Me', component: 'AboutMe' },
     { title: 'Projects', component: 'Projects' },
-    // ... other menu items if needed
+    // Add other menu items if needed
   ];
 
   const loadComponent = async (componentName) => {
@@ -17,6 +17,7 @@ const BlogModal = ({ isOpen, onClose }) => {
       setActiveComponent(<Component />);
     } catch (error) {
       console.error(`Error loading component '${componentName}':`, error);
+      // Handle the error as needed
     }
   };
 
