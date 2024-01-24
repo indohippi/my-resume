@@ -1,0 +1,29 @@
+/* AboutMe.module.css */
+.container {
+    display: flex;
+  }
+  
+  .menu {
+    width: 20%;
+    padding: 10px;
+  }
+  
+  .menuItem {
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menuItem:hover {
+    background-color: #e2e2e2;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .categoryContent {
+    margin-top: 20px;
+  }
+  
