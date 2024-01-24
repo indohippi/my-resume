@@ -2,15 +2,26 @@
 import React, { useState } from 'react';
 import styles from '/styles/BlogModal.module.css';
 
-const BlogModal = ({ isOpen, onClose, menuItems }) => {
+const BlogModal = ({ isOpen, onClose }) => {
   const [activeComponent, setActiveComponent] = useState(null);
 
+  const menuItems = [
+    { title: 'About Me', component: 'AboutMe' },
+    { title: 'Projects', component: 'Projects' },
+    // ... other menu items if needed
+  ];
+
   const loadComponent = async (componentName) => {
-    // Similar logic to loadComponent in Blog.js
+    try {
+      const Component = await import(`../pages/${componentName}`).then(mod => mod.default);
+      setActiveComponent(<Component />);
+    } catch (error) {
+      console.error(`Error loading component '${componentName}':`, error);
+    }
   };
 
   const handleMenuItemClick = (componentName) => {
-    loadComponent(componentName).then(setActiveComponent);
+    loadComponent(componentName);
   };
 
   if (!isOpen) return null;
