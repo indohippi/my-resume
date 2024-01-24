@@ -1,46 +1,54 @@
-import React, { useState } from 'react';
-import BlogModal from './BlogModal'; // Import the new BlogModal component
+// Blog.js
+import React, { useState, useEffect } from 'react';
+import Modal from './Modal';
 import styles from '/styles/Blog.module.css';
 
 const Blog = () => {
-  const [isBlogModalOpen, setIsBlogModalOpen] = useState(false);
-  const [selectedComponent, setSelectedComponent] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState(null);
 
   const posts = [
-    { title: 'Post 1', component: 'Component1' },
-    { title: 'Post 2', component: 'Component2' },
+    { title: 'About Me', component: 'Component1' },
+    { title: 'Projects', component: 'Component2' },
     // ... other posts
   ];
 
-  const openBlogModalWithPost = async (componentName) => {
+  const loadComponent = async (componentName) => {
+    if (!componentName) return null;
     try {
-      const Component = await import(`../pages/${componentName}`).then(mod => mod.default);
-      setSelectedComponent(() => Component); // Store the component to render in the modal
-      setIsBlogModalOpen(true);
+      const component = await import(`../pages/${componentName}`).then(mod => mod.default);
+      return React.createElement(component);
     } catch (error) {
-      console.error(`Error loading component '${componentName}':`, error);
-      // Handle the error appropriately
+      console.error(`Cannot load component '${componentName}':`, error);
+      // Handle the error, possibly by setting an error state and displaying a message to the user
+      return null;
     }
+  };  
+
+  const openModalWithPost = async (componentName) => {
+    const content = await loadComponent(componentName);
+    setModalContent(content);
+    setIsModalOpen(true);
   };
 
-  const closeBlogModal = () => {
-    setIsBlogModalOpen(false);
-    setSelectedComponent(null);
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setModalContent(null);
   };
 
   return (
     <>
       <div className={styles.blogContainer}>
         {posts.map((post, index) => (
-          <div key={index} className={styles.post} onClick={() => openBlogModalWithPost(post.component)}>
+          <div key={index} className={styles.post} onClick={() => openModalWithPost(post.component)}>
             <h3>{post.title}</h3>
           </div>
         ))}
       </div>
-      {isBlogModalOpen && (
-        <BlogModal onClose={closeBlogModal}>
-          {selectedComponent ? <selectedComponent /> : null}
-        </BlogModal>
+      {isModalOpen && (
+        <Modal onClose={closeModal}>
+          {modalContent}
+        </Modal>
       )}
     </>
   );
