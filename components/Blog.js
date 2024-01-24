@@ -8,10 +8,10 @@ const Blog = () => {
   const [modalContent, setModalContent] = useState(null);
 
   const posts = [
-    { title: 'About Me', component: 'Component1' },
-    { title: 'Projects', component: 'Component2' },
+    { title: 'About Me', component: 'AboutMe' },
+    { title: 'Projects', component: 'Projects' },
     // ... other posts
-  ];
+  ];  
 
   const loadComponent = async (componentName) => {
     if (!componentName) return null;
